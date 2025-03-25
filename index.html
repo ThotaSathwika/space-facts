@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001f3f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Space Fun Facts Generator</h1>
+        <p id="fun-fact">Click the button to generate a fun fact about space!</p>
+        <button id="generate-button">Generate Another Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Space is filled with giant bubbles created by the explosive deaths of stars.",
+            "Astronauts returning from spacewalks have reported that space smells like hot metal or seared steak.",
+            "There’s a massive cloud of water vapor floating in space, containing 140 trillion times the water in Earth's oceans!",
+            "Galaxies can 'eat' each other! When two galaxies collide, they can merge into a larger galaxy.",
+            "If you were to travel near the speed of light, time would slow down for you compared to people on Earth.",
+            "Some moons in our solar system have their own moons!",
+            "The largest waterfall in the universe is a massive waterfall of gas flowing from a galaxy called 'Hercules A.'",
+            "On planets like Neptune and Uranus, scientists believe it rains diamonds!",
+            "While space is silent, scientists have converted electromagnetic waves from planets and stars into sound waves.",
+            "The universe is constantly expanding, and galaxies are moving away from each other.",
+            "The coldest known place in the universe is the Boomerang Nebula, where temperatures drop to -458 degrees Fahrenheit (-272 degrees Celsius).",
+            "Black holes are regions in space where the gravitational pull is so strong that nothing can escape from them.",
+            "Neutron stars are incredibly dense; a sugar-cube-sized amount of material from one would weigh about as much as all of humanity combined!",
+            "There are an estimated 2 trillion galaxies in the observable universe, each containing millions or billions of stars.",
+            "Mars has the largest dust storms in the solar system, which can cover the entire planet for weeks.",
+            "The Milky Way galaxy is about 100,000 light-years in diameter and contains over 100 billion stars.",
+            "The Great Wall of Galaxies is the largest known structure in the universe, measuring over 10 billion light-years across.",
+            "Time moves slower in stronger gravitational fields, meaning time passes differently for astronauts in space compared to people on Earth.",
+            "The most distant galaxy ever observed is GN-z11, about 13.4 billion light-years away.",
+            "The Sun accounts for about 99.86% of the total mass of our solar system."
+        ];
+
+        document.getElementById('generate-button').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fun-fact').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
+
